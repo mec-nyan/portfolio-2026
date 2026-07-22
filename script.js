@@ -109,6 +109,18 @@ function scroller() {
   }
 }
 
+function changeTheme() {
+  const ti = document.getElementById('theme-icon')
+
+  if (ti.innerText === 'dark_mode') {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    ti.innerText = 'light_mode'
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light')
+    ti.innerText = 'dark_mode'
+  }
+}
+
 typewriter('typewriter', [
   'Coder',
   'Developer',
@@ -118,4 +130,8 @@ typewriter('typewriter', [
 ])
 
 scroller()
-document.documentElement.setAttribute('data-theme', 'light')
+
+document.documentElement.setAttribute('data-theme', 'dark')
+
+const ts = document.getElementById('theme-switch')
+ts.addEventListener('click', changeTheme)
