@@ -10,7 +10,7 @@
   --bg-dark: #080808;
   --fg-primary: #b0b0b0;
   --fg-secondary: #808080;
-  --fg-tertiary: #606060;
+  --fg-tertiary: #505050;
   --default-border: #282828;
 }
 
@@ -110,10 +110,22 @@ body {
       gap: 3rem;
       animation: scroll 20s linear infinite;
 
-      .item {
+      &:hover {
+        animation-play-state: paused;
+      }
+
+      span {
         font-size: 2rem;
+        color: var(--fg-tertiary);
         font-weight: bold;
         white-space: nowrap;
+        opacity: 0.6;
+        filter: grayscale(0.75);
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+          transform: scale(1.6);
+        }
       }
     }
   }

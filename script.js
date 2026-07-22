@@ -40,4 +40,54 @@ async function typewriter(
   }
 }
 
+function scroller() {
+  const langs = [
+    {
+      name: 'rust-original',
+      color: 'chocolate',
+    },
+    {
+      name: 'go-original-wordmark',
+      color: 'cornflowerblue',
+    },
+    {
+      name: 'bash-plain',
+      color: 'white',
+    },
+    {
+      name: 'python-plain',
+      color: 'dodgerblue',
+    },
+    {
+      name: 'cplusplus-plain',
+      color: 'royalblue',
+    },
+    {
+      name: 'c-original',
+      color: 'cornflowerblue',
+    },
+    {
+      name: 'javascript-plain',
+      color: 'yellow',
+    },
+    {
+      name: 'typescript-plain',
+      color: 'dodgerblue',
+    },
+  ]
+
+  const track = document.getElementById('track')
+  const items = [...langs, ...langs]
+
+  for (const lang of items) {
+    const s = document.createElement('span')
+    s.className = 'devicon-' + lang.name
+    s.style.color = lang.color
+    // s.textContent = lang
+    track.appendChild(s)
+  }
+}
+
 typewriter('typewriter', ['Coder', 'Developer', 'Engineer', 'Tea drinker'])
+
+scroller()
