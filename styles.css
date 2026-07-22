@@ -6,16 +6,47 @@
 }
 
 :root {
-  --default-bg: #101010;
-  --bg-dark: #080808;
+  --logo-rs: coral;
+  --logo-go: cornflowerblue;
+  --logo-sh: gainsboro;
+  --logo-js: yellow;
+  --logo-ts: dodgerblue;
+  --logo-py: dodgerblue;
+  --logo-cc: royalblue;
+  --logo-c: cornflowerblue;
+  --logo-lua: deepskyblue;
+}
+
+:root[data-theme='dark'] {
+  --bg-primary: #101010;
+  --bg-secondary: #080808;
+
   --fg-primary: #b0b0b0;
   --fg-secondary: #808080;
   --fg-tertiary: #505050;
-  --default-border: #282828;
+
+  --border-primary: #282828;
+
+  --logo-opacity: 0.6;
+}
+
+:root[data-theme='light'] {
+  --bg-primary: #e0e0e0;
+  --bg-secondary: #c0c0c0;
+
+  --fg-primary: #202020;
+  --fg-secondary: #404040;
+  --fg-tertiary: #606060;
+
+  --border-primary: #a0a0a0;
+
+  --logo-sh: #606060;
+  --logo-js: gold;
+  --logo-opacity: 1;
 }
 
 body {
-  background-color: var(--default-bg);
+  background-color: var(--bg-primary);
 }
 
 #root {
@@ -25,7 +56,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: var(--default-bg);
+  background-color: var(--bg-primary);
   color: var(--fg-primary);
   /* border: 1px solid red; */
 
@@ -36,12 +67,12 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid var(--default-border);
+    border-bottom: 1px solid var(--border-primary);
 
     #nav-left {
       height: 100%;
       aspect-ratio: 4/3;
-      border-right: 1px solid var(--default-border);
+      border-right: 1px solid var(--border-primary);
       span {
         height: 100%;
         width: 100%;
@@ -50,7 +81,7 @@ body {
         justify-content: center;
         color: var(--fg-secondary);
         /* padding: 0 8px; */
-        background-color: var(--bg-dark);
+        background-color: var(--bg-secondary);
         /* border: 1px solid red; */
       }
     }
@@ -121,10 +152,9 @@ body {
         font-size: 1.5rem;
         font-weight: normal;
         font-family: 'EB Garamond', serif;
-        color: var(--fg-secondary);
-        text-shadow: 4px 4px 0px black;
+        color: var(--fg-tertiary);
         white-space: nowrap;
-        opacity: 0.5;
+        opacity: var(--logo-opacity);
         filter: grayscale(0.75);
         transition: transform 0.2s ease-in-out;
 

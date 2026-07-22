@@ -45,47 +45,47 @@ function scroller() {
     {
       name: 'Rust',
       iconName: 'rust-original',
-      color: 'chocolate',
+      color: 'rs',
     },
     {
       name: 'Go',
       iconName: 'go-original-wordmark',
-      color: 'cornflowerblue',
+      color: 'go',
     },
     {
       name: 'Bash',
       iconName: 'bash-plain',
-      color: 'gainsboro',
+      color: 'sh',
     },
     {
       name: 'Python',
       iconName: 'python-plain',
-      color: 'dodgerblue',
+      color: 'py',
     },
     {
       name: 'C++',
       iconName: 'cplusplus-plain',
-      color: 'royalblue',
+      color: 'cc',
     },
     {
       name: 'C',
       iconName: 'c-original',
-      color: 'cornflowerblue',
+      color: 'c',
     },
     {
       name: 'Javascript',
       iconName: 'javascript-plain',
-      color: 'yellow',
+      color: 'js',
     },
     {
       name: 'TypeScript',
       iconName: 'typescript-plain',
-      color: 'dodgerblue',
+      color: 'ts',
     },
     {
       name: 'Lua',
       iconName: 'lua-plain',
-      color: 'deepskyblue',
+      color: 'lua',
     },
   ]
 
@@ -96,7 +96,7 @@ function scroller() {
   for (const lang of items) {
     const s = document.createElement('span')
     s.className = 'devicon-' + lang.iconName
-    s.style.color = lang.color
+    s.style.color = `var(--logo-${lang.color})`
     if (lang.iconName.startsWith('go')) {
       s.style.fontSize = '4rem'
     }
@@ -118,3 +118,4 @@ typewriter('typewriter', [
 ])
 
 scroller()
+document.documentElement.setAttribute('data-theme', 'light')
