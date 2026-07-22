@@ -101,17 +101,40 @@ body {
   .ticker {
     width: 100%;
     overflow: hidden;
-    padding: 2rem 0 1rem;
-    color: var(--fg-tertiary);
+    padding: 2vh 0 1vh;
+    /* border: 1px solid red; */
 
     .track {
-      display: flex;
+      /* border: 1px solid blue; */
       width: max-content;
-      gap: 3rem;
-      animation: scroll 30s linear infinite;
+      min-width: 200%;
+      gap: 2rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      /* width: max-content; */
+      /* gap: 3rem; */
+      animation: scroll 60s linear infinite;
+
+      span {
+        font-size: 1.5rem;
+        font-weight: normal;
+        font-family: 'EB Garamond', serif;
+        color: var(--fg-secondary);
+        text-shadow: 4px 4px 0px black;
+        white-space: nowrap;
+        opacity: 0.5;
+        filter: grayscale(0.75);
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+          transform: scale(1.6);
+        }
+      }
 
       &.reverse {
-        animation: scrollReverse 30s linear infinite;
+        animation: scrollReverse 60s linear infinite;
 
         span {
           font-size: 2.4rem;
@@ -120,22 +143,6 @@ body {
 
       &:hover {
         animation-play-state: paused;
-      }
-
-      span {
-        font-size: 1.5rem;
-        font-weight: normal;
-        font-family: 'EB Garamond', serif;
-        color: var(--fg-tertiary);
-        color: var(--fg-tertiary);
-        white-space: nowrap;
-        opacity: 0.6;
-        filter: grayscale(0.75);
-        transition: transform 0.2s ease-in-out;
-
-        &:hover {
-          transform: scale(1.6);
-        }
       }
     }
   }

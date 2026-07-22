@@ -99,10 +99,7 @@ function scroller() {
     s.style.color = lang.color
     if (lang.iconName.startsWith('go')) {
       s.style.fontSize = '4rem'
-      s.style.position = 'relative'
-      s.style.top = '-0.8rem'
     }
-    // s.textContent = lang
     track2.appendChild(s)
 
     const t = document.createElement('span')
