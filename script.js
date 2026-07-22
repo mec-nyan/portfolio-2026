@@ -43,51 +43,81 @@ async function typewriter(
 function scroller() {
   const langs = [
     {
-      name: 'rust-original',
+      name: 'Rust',
+      iconName: 'rust-original',
       color: 'chocolate',
     },
     {
-      name: 'go-original-wordmark',
+      name: 'Go',
+      iconName: 'go-original-wordmark',
       color: 'cornflowerblue',
     },
     {
-      name: 'bash-plain',
-      color: 'white',
+      name: 'Bash',
+      iconName: 'bash-plain',
+      color: 'gainsboro',
     },
     {
-      name: 'python-plain',
+      name: 'Python',
+      iconName: 'python-plain',
       color: 'dodgerblue',
     },
     {
-      name: 'cplusplus-plain',
+      name: 'C++',
+      iconName: 'cplusplus-plain',
       color: 'royalblue',
     },
     {
-      name: 'c-original',
+      name: 'C',
+      iconName: 'c-original',
       color: 'cornflowerblue',
     },
     {
-      name: 'javascript-plain',
+      name: 'Javascript',
+      iconName: 'javascript-plain',
       color: 'yellow',
     },
     {
-      name: 'typescript-plain',
+      name: 'TypeScript',
+      iconName: 'typescript-plain',
       color: 'dodgerblue',
+    },
+    {
+      name: 'Lua',
+      iconName: 'lua-plain',
+      color: 'deepskyblue',
     },
   ]
 
   const track = document.getElementById('track')
+  const track2 = document.getElementById('track2')
   const items = [...langs, ...langs]
 
   for (const lang of items) {
     const s = document.createElement('span')
-    s.className = 'devicon-' + lang.name
+    s.className = 'devicon-' + lang.iconName
     s.style.color = lang.color
+    if (lang.iconName.startsWith('go')) {
+      s.style.fontSize = '4rem'
+      s.style.position = 'relative'
+      s.style.top = '-0.8rem'
+    }
     // s.textContent = lang
-    track.appendChild(s)
+    track2.appendChild(s)
+
+    const t = document.createElement('span')
+    // t.style.color = lang.color
+    t.textContent = lang.name
+    track.appendChild(t)
   }
 }
 
-typewriter('typewriter', ['Coder', 'Developer', 'Engineer', 'Tea drinker'])
+typewriter('typewriter', [
+  'Coder',
+  'Developer',
+  'Engineer',
+  'Tea drinker',
+  'SysAdmin',
+])
 
 scroller()
