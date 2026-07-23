@@ -16,6 +16,9 @@
   --logo-cc: royalblue;
   --logo-c: cornflowerblue;
   --logo-lua: deepskyblue;
+  --logo-react: deepskyblue;
+  --logo-deb: deeppink;
+  --logo-ubu: tomato;
 }
 
 :root[data-theme='dark'] {

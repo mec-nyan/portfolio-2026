@@ -83,9 +83,24 @@ function scroller() {
       color: 'ts',
     },
     {
+      name: 'React',
+      iconName: 'react-original',
+      color: 'react',
+    },
+    {
       name: 'Lua',
       iconName: 'lua-plain',
       color: 'lua',
+    },
+    {
+      name: 'debian',
+      iconName: 'debian-plain',
+      color: 'deb',
+    },
+    {
+      name: 'Ubuntu',
+      iconName: 'ubuntu-plain',
+      color: 'ubu',
     },
   ]
 
