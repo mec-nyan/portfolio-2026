@@ -135,3 +135,28 @@ document.documentElement.setAttribute('data-theme', 'dark')
 
 const ts = document.getElementById('theme-switch')
 ts.addEventListener('click', changeTheme)
+
+const items = document.querySelectorAll('.item')
+
+items.forEach((item) => {
+  const header = item.querySelector('.header')
+  const content = item.querySelector('.content')
+
+  if (item.classList.contains('active')) {
+    content.style.maxHeight = content.scrollHeight + 'px'
+  }
+
+  header.addEventListener('click', () => {
+    const isOpen = item.classList.contains('active')
+
+    items.forEach((i) => {
+      i.classList.remove('active')
+      i.querySelector('.content').style.maxHeight = null
+    })
+
+    if (!isOpen) {
+      item.classList.add('active')
+      content.style.maxHeight = content.scrollHeight + 'px'
+    }
+  })
+})
