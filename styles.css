@@ -214,12 +214,7 @@ body {
     /* border: 1px solid hotpink; */
 
     .item {
-      padding: 1rem 0rem;
       border-bottom: 1px solid var(--border-primary);
-      transition: background-color 0.3s ease-in-out;
-      &:hover {
-        background-color: var(--bg-highlight);
-      }
 
       &.active {
         .header {
@@ -228,9 +223,15 @@ body {
       }
 
       .header {
+        padding: 1rem 0rem;
         cursor: pointer;
         font-family: 'EB Garamond', serif;
         font-size: 1.5rem;
+        /* border: 1px solid pink; */
+        transition: background-color 0.3s ease-in-out;
+        &:hover {
+          background-color: var(--bg-highlight);
+        }
 
         .plus {
           padding: 0 1rem;
@@ -245,6 +246,11 @@ body {
         transition: max-height 0.3s ease;
 
         .body {
+          padding-bottom: 1rem;
+          transition: background-color 0.3s ease-in-out;
+          &:hover {
+            background-color: var(--bg-highlight);
+          }
           p {
             padding: 1rem;
             /* font-style: italic; */

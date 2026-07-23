@@ -167,11 +167,13 @@ items.forEach((item) => {
     items.forEach((i) => {
       i.classList.remove('active')
       i.querySelector('.content').style.maxHeight = null
+      i.querySelector('.plus').innerText = '+'
     })
 
     if (!isOpen) {
       item.classList.add('active')
       content.style.maxHeight = content.scrollHeight + 'px'
+      item.querySelector('.plus').innerText = '-'
     }
   })
 })
