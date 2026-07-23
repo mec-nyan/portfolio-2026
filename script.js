@@ -140,8 +140,9 @@ typewriter('typewriter', [
   'Coder',
   'Developer',
   'Engineer',
-  'Tea drinker',
+  'FLOSS enthusiast',
   'SysAdmin',
+  'Linux beard',
 ])
 
 scroller()
