@@ -29,6 +29,7 @@
   --fg-primary: #b0b0b0;
   --fg-secondary: #808080;
   --fg-tertiary: #505050;
+  --fg-accent: darkorange;
 
   --border-primary: #282828;
 
@@ -43,6 +44,7 @@
   --fg-primary: #202020;
   --fg-secondary: #404040;
   --fg-tertiary: #606060;
+  --fg-accent: chocolate;
 
   --border-primary: #a0a0a0;
 
@@ -219,6 +221,12 @@ body {
         background-color: var(--bg-highlight);
       }
 
+      &.active {
+        .header {
+          color: var(--fg-tertiary);
+        }
+      }
+
       .header {
         cursor: pointer;
         font-family: 'EB Garamond', serif;
@@ -237,10 +245,18 @@ body {
         transition: max-height 0.3s ease;
 
         .body {
-          padding: 1rem;
-          font-style: italic;
-          font-family: 'EB Garamond', serif;
-          font-size: 1.2rem;
+          p {
+            padding: 1rem;
+            /* font-style: italic; */
+            text-indent: 2rem;
+            font-family: 'EB Garamond', serif;
+            font-size: 1.4rem;
+            /* color: var(--fg-secondary); */
+
+            .lead {
+              color: var(--fg-accent);
+            }
+          }
         }
       }
     }
