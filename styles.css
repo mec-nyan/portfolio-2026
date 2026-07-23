@@ -64,7 +64,7 @@ body {
 
 #root {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -163,7 +163,7 @@ body {
   .ticker {
     width: 100%;
     overflow: hidden;
-    padding: 2vh 0 1vh;
+    /* padding: 0; */
     /* border: 1px solid red; */
 
     .track {
@@ -195,6 +195,8 @@ body {
       }
 
       &.reverse {
+        /* border: 1px solid blue; */
+        margin-top: 1rem;
         animation: scrollReverse 60s linear infinite;
 
         span {
@@ -209,7 +211,7 @@ body {
   }
 
   .accordion {
-    padding: 2rem 1rem;
+    margin-top: 3rem;
     width: 80%;
     /* border: 1px solid hotpink; */
 
