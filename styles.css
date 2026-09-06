@@ -273,6 +273,7 @@ body {
                 width: 60%;
                 margin: 16px 20%;
                 border: 1px solid var(--fg-tertiary);
+                overflow: hidden;
                 border-radius: 8px;
                 box-shadow:
                   0 0 8px var(--bg-shadow),
@@ -286,6 +287,12 @@ body {
                 }
               }
             }
+          }
+          .showcase-separator {
+            width: 60%;
+            margin: 32px auto;
+            height: 1px;
+            background-color: var(--fg-tertiary);
           }
         }
       }
