@@ -25,6 +25,7 @@
   --bg-primary: #101010;
   --bg-secondary: #080808;
   --bg-highlight: #202020;
+  --bg-shadow: #000000;
 
   --fg-primary: #b0b0b0;
   --fg-secondary: #808080;
@@ -40,6 +41,7 @@
   --bg-primary: #e0e0e0;
   --bg-secondary: #c0c0c0;
   --bg-highlight: #f0f0f0;
+  --bg-shadow: #404040;
 
   --fg-primary: #202020;
   --fg-secondary: #404040;
@@ -263,6 +265,26 @@ body {
 
             .lead {
               color: var(--fg-accent);
+            }
+            &.showcase {
+              text-indent: 0;
+              text-align: center;
+              .nano-shot {
+                width: 60%;
+                margin: 16px 20%;
+                border: 1px solid var(--fg-tertiary);
+                border-radius: 8px;
+                box-shadow:
+                  0 0 8px var(--bg-shadow),
+                  0 0 16px var(--bg-shadow),
+                  0 0 32px var(--bg-shadow);
+              }
+              a {
+                color: var(--fg-accent);
+                &:visited {
+                  color: var(--logo-ubu);
+                }
+              }
             }
           }
         }
