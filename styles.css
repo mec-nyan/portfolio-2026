@@ -122,6 +122,10 @@ body {
 
         span {
           color: var(--fg-tertiary);
+          /* temporarily hide the icons whose functionality has not yet been implemented. */
+          &.hidden {
+            display: none;
+          }
         }
       }
     }
@@ -272,7 +276,7 @@ body {
               text-align: center;
               .nano-shot {
                 width: 60%;
-                margin: 16px 20%;
+                margin: 32px 20%;
                 border: 1px solid var(--fg-tertiary);
                 overflow: hidden;
                 border-radius: 8px;
@@ -383,5 +387,10 @@ body {
 @media (orientation: landscape) {
   #root {
     max-width: 960px;
+  }
+
+  .nano-shot {
+    max-width: 200px;
+    display: inline-block;
   }
 }
