@@ -111,13 +111,14 @@ body {
       justify-content: flex-end;
       align-items: center;
 
-      div {
+      .switch {
         height: 100%;
         width: 64px;
         display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        position: relative;
         /* border: 1px solid yellow; */
 
         span {
@@ -125,6 +126,48 @@ body {
           /* temporarily hide the icons whose functionality has not yet been implemented. */
           &.hidden {
             display: none;
+          }
+        }
+
+        #lang-popup {
+          position: absolute;
+          top: 52px;
+          right: 0;
+          width: 170px;
+          height: 100px;
+          display: flex;
+          flex-direction: column;
+          border: 1px solid var(--border-primary);
+          border-top: none;
+
+          .lang-option {
+            width: fit-content;
+            height: 50px;
+            display: grid;
+            grid-template-rows: 50px;
+            grid-template-columns: 50px 70px 50px;
+            align-items: center;
+            justify-items: center;
+            transition: all 300ms ease-in;
+            color: var(--fg-secondary);
+
+            &:first-of-type {
+              border-bottom: 1px solid var(--border-primary);
+            }
+
+            &:hover {
+              background-color: var(--bg-highlight);
+              color: var(--fg-primary);
+            }
+
+            .lang-name {
+              width: 100%;
+              text-align: left;
+              font-family: 'EB Garamond', serif;
+              font-size: 1.2rem;
+              font-style: italic;
+              /* border: 1px solid pink; */
+            }
           }
         }
       }
