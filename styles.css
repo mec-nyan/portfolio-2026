@@ -122,7 +122,7 @@ body {
         /* border: 1px solid yellow; */
 
         span {
-          color: var(--fg-tertiary);
+          color: var(--fg-secondary);
           /* temporarily hide the icons whose functionality has not yet been implemented. */
           &.hidden {
             display: none;
@@ -135,7 +135,7 @@ body {
           right: 0;
           width: 170px;
           height: 100px;
-          display: flex;
+          display: none;
           flex-direction: column;
           border: 1px solid var(--border-primary);
           border-top: none;

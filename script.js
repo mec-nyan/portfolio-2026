@@ -202,3 +202,18 @@ function swithLanguage() {
 }
 
 swithLanguage()
+
+const languagePopup = document.getElementById('lang-popup')
+
+function toggleLanguageSelector() {
+  console.log('>>', languagePopup.style.display)
+  const isVisible = languagePopup.style.display == 'flex'
+  if (isVisible) {
+    languagePopup.style.display = 'none'
+  } else {
+    languagePopup.style.display = 'flex'
+  }
+}
+
+const languageSwith = document.getElementById('lang-switch')
+languageSwith.addEventListener('click', toggleLanguageSelector)
