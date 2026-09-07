@@ -178,3 +178,27 @@ items.forEach((item) => {
     }
   })
 })
+
+// i18n
+const translations = {
+  en: {
+    madeWith: 'Made with',
+    by: 'by',
+    in: 'in',
+  },
+  es: {
+    madeWith: 'Hecho con',
+    by: 'por',
+    in: 'en',
+  },
+}
+
+function swithLanguage() {
+  const lang = localStorage.getItem('language') || 'en'
+
+  document.querySelectorAll('[data-i18n]').forEach((elem) => {
+    elem.innerText = translations[lang][elem.getAttribute('data-i18n')]
+  })
+}
+
+swithLanguage()
