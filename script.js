@@ -193,7 +193,7 @@ const translations = {
   },
 }
 
-function swithLanguage() {
+function applyLanguage() {
   const lang = localStorage.getItem('language') || 'en'
 
   document.querySelectorAll('[data-i18n]').forEach((elem) => {
@@ -201,12 +201,11 @@ function swithLanguage() {
   })
 }
 
-swithLanguage()
+applyLanguage()
 
 const languagePopup = document.getElementById('lang-popup')
 
 function toggleLanguageSelector() {
-  console.log('>>', languagePopup.style.display)
   const isVisible = languagePopup.style.display == 'flex'
   if (isVisible) {
     languagePopup.style.display = 'none'
@@ -215,5 +214,36 @@ function toggleLanguageSelector() {
   }
 }
 
-const languageSwith = document.getElementById('lang-switch')
+const languageSwith = document.getElementById('lang-switch-icon')
+
 languageSwith.addEventListener('click', toggleLanguageSelector)
+
+function setLanguage(lang) {
+  localStorage.setItem('language', lang)
+
+  const indicatorEn = document.getElementById('lang-indicator-en')
+  const indicatorEs = document.getElementById('lang-indicator-es')
+
+  indicatorEn.innerText = ''
+  indicatorEs.innerText = ''
+
+  if (lang == 'en') {
+    indicatorEn.innerText = '▪'
+  } else if (lang == 'es') {
+    indicatorEs.innerText = '▪'
+  }
+}
+
+const langEn = document.getElementById('lang-en')
+langEn.addEventListener('click', () => {
+  setLanguage('en')
+  toggleLanguageSelector()
+  applyLanguage()
+})
+
+const langEs = document.getElementById('lang-es')
+langEs.addEventListener('click', () => {
+  setLanguage('es')
+  toggleLanguageSelector()
+  applyLanguage()
+})
