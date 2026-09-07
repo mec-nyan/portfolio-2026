@@ -121,12 +121,14 @@ body {
         position: relative;
         /* border: 1px solid yellow; */
 
+        /* temporarily hide the icons whose functionality has not yet been implemented. */
+        &.hidden {
+          display: none;
+          cursor: default;
+        }
+
         span {
           color: var(--fg-secondary);
-          /* temporarily hide the icons whose functionality has not yet been implemented. */
-          &.hidden {
-            display: none;
-          }
         }
 
         #lang-popup {
