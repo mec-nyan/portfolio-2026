@@ -1,5 +1,33 @@
+/**
+ * My portfolio 2026.
+ *
+ * This script provides functionality needed to:
+ *
+ *     - Switch between dark and light theme.
+ *     - Change the language (options: English, Spanish).
+ *     - Add animations.
+ *     - Dynamically loaded content.
+ */
+
+/**
+ * Pause for a number of milliseconds.
+ * @param {number} ms - The duration of the pause in milliseconds.
+ */
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
+/**
+ * Write words as if they're being typed.
+ *
+ * @param {string} id - The id of the div you want to write to.
+ * @param {string[]} words - The list of words to write. Must contain at least one word.
+ * @param {Object} [options] - Timing options in ms.
+ * @param {number} [options.typingDelay=100] - Delay between 'key strokes'.
+ * @param {number} [options.erasingDelay=50] - Delay between 'backspaces'.
+ * @param {number} [options.bigPause=2000] - Pause after typing a word.
+ * @param {number} [options.smallPause=200] - Pause after deleting a word.
+ * @returns {Promise<void>} A promise that runs forever while active.
+ * @throws {Error} If no element with id 'id' can be found.
+ */
 async function typewriter(
   id,
   words,
@@ -40,6 +68,7 @@ async function typewriter(
   }
 }
 
+/** scroller creates two tracks with scrolling icons in opposite directions. */
 function scroller() {
   const langs = [
     {
@@ -124,6 +153,7 @@ function scroller() {
   }
 }
 
+/** Change the site's theme. */
 function changeTheme() {
   const ti = document.getElementById('theme-icon')
 
@@ -136,6 +166,7 @@ function changeTheme() {
   }
 }
 
+// Initiate the typewriter effect.
 typewriter('typewriter', [
   'Coder',
   'Developer',
@@ -145,13 +176,19 @@ typewriter('typewriter', [
   'Linux beard',
 ])
 
+// Initiate the scroller.
 scroller()
 
+// Set the default page's theme to 'dark'.
 document.documentElement.setAttribute('data-theme', 'dark')
 
+// Add the theme switcher.
 const ts = document.getElementById('theme-switch')
 ts.addEventListener('click', changeTheme)
 
+// Accordion.
+// Select all the items.  Add the event listener to open, close and style the elements of
+// the accordion.
 const items = document.querySelectorAll('.item')
 
 items.forEach((item) => {
@@ -193,6 +230,7 @@ const translations = {
   },
 }
 
+/** Update the content of the page according to the preferred language. */
 function applyLanguage() {
   const lang = localStorage.getItem('language') || 'en'
 
@@ -203,8 +241,10 @@ function applyLanguage() {
 
 applyLanguage()
 
+// Set up a language selector.
 const languagePopup = document.getElementById('lang-popup')
 
+// Toggle the visibility of the language selector pop up.
 function toggleLanguageSelector() {
   const isVisible = languagePopup.style.display == 'flex'
   if (isVisible) {
@@ -214,10 +254,12 @@ function toggleLanguageSelector() {
   }
 }
 
+// Provide the functionality to the language switcher icon.
 const languageSwith = document.getElementById('lang-switch-icon')
 
 languageSwith.addEventListener('click', toggleLanguageSelector)
 
+// Set the page's current language.
 function setLanguage(lang) {
   localStorage.setItem('language', lang)
 
@@ -234,6 +276,7 @@ function setLanguage(lang) {
   }
 }
 
+// Bind the language options (en).
 const langEn = document.getElementById('lang-en')
 langEn.addEventListener('click', () => {
   setLanguage('en')
@@ -241,6 +284,7 @@ langEn.addEventListener('click', () => {
   applyLanguage()
 })
 
+// Bind the language options (es).
 const langEs = document.getElementById('lang-es')
 langEs.addEventListener('click', () => {
   setLanguage('es')
