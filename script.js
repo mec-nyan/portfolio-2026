@@ -221,6 +221,12 @@ const translations = {
   en: {
     // about:
     aboutMe: 'About me',
+    fullStack: `<span class='lead'>Full-stack developer</span> delivering robust, maintainable software
+              for world-class applications — web, desktop and terminal (TUI)
+              — using bleeding-edge technologies and industry best
+              practices.`,
+    lifeLongLearner: `<span class='lead'>Lifelong learner</span>, passionate about technology and open-source,
+              eager for the next challenge.`,
     // experience:
     xp: 'Experience',
     // education:
@@ -237,6 +243,11 @@ const translations = {
   es: {
     // about:
     aboutMe: 'Acerca de mi',
+    fullStack: `<span class='lead'>Desarrollador full-stack</span> creando software robusto y mantenible
+              para aplicaciones de clase mundial — web, desktop y terminal (TUI)
+              — con tecnología de punta y siguiendo las mejores prácticas de la industria.`,
+    lifeLongLearner: `<span class='lead'>Siempre aprendiento</span>, apasionado por la tecnología y el
+              código abierto, ansioso por encontrar el próximo desafío.`,
     // experience:
     xp: 'Experiencia',
     // education:
@@ -276,7 +287,7 @@ function applyLanguage() {
   updateLanguagePopup(lang)
 
   document.querySelectorAll('[data-i18n]').forEach((elem) => {
-    elem.innerText = translations[lang][elem.getAttribute('data-i18n')]
+    elem.innerHTML = translations[lang][elem.getAttribute('data-i18n')]
   })
 }
 
