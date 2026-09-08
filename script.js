@@ -252,9 +252,28 @@ const translations = {
   },
 }
 
+// Set up a language selector.
+const languagePopup = document.getElementById('lang-popup')
+
+/** Update language poput to show current language. */
+function updateLanguagePopup(lang) {
+  const indicatorEn = document.getElementById('lang-indicator-en')
+  const indicatorEs = document.getElementById('lang-indicator-es')
+
+  indicatorEn.innerText = ''
+  indicatorEs.innerText = ''
+
+  if (lang == 'en') {
+    indicatorEn.innerText = '▪'
+  } else if (lang == 'es') {
+    indicatorEs.innerText = '▪'
+  }
+}
+
 /** Update the content of the page according to the preferred language. */
 function applyLanguage() {
   const lang = localStorage.getItem('language') || 'en'
+  updateLanguagePopup(lang)
 
   document.querySelectorAll('[data-i18n]').forEach((elem) => {
     elem.innerText = translations[lang][elem.getAttribute('data-i18n')]
@@ -262,9 +281,6 @@ function applyLanguage() {
 }
 
 applyLanguage()
-
-// Set up a language selector.
-const languagePopup = document.getElementById('lang-popup')
 
 // Toggle the visibility of the language selector pop up.
 function toggleLanguageSelector() {
@@ -284,18 +300,7 @@ languageSwith.addEventListener('click', toggleLanguageSelector)
 // Set the page's current language.
 function setLanguage(lang) {
   localStorage.setItem('language', lang)
-
-  const indicatorEn = document.getElementById('lang-indicator-en')
-  const indicatorEs = document.getElementById('lang-indicator-es')
-
-  indicatorEn.innerText = ''
-  indicatorEs.innerText = ''
-
-  if (lang == 'en') {
-    indicatorEn.innerText = '▪'
-  } else if (lang == 'es') {
-    indicatorEs.innerText = '▪'
-  }
+  updateLanguagePopup(lang)
 }
 
 // Bind the language options (en).
