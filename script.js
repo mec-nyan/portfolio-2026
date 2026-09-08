@@ -219,11 +219,33 @@ items.forEach((item) => {
 // i18n
 const translations = {
   en: {
+    // about:
+    aboutMe: 'About me',
+    // experience:
+    xp: 'Experience',
+    // education:
+    ed: 'Education',
+    // showcase:
+    showcase: 'Showcase',
+    // contact:
+    contact: 'Contact',
+    // footer:
     madeWith: 'Made with',
     by: 'by',
     in: 'in',
   },
   es: {
+    // about:
+    aboutMe: 'Acerca de mi',
+    // experience:
+    xp: 'Experiencia',
+    // education:
+    ed: 'Educacion',
+    // showcase:
+    showcase: 'Galería',
+    // contact:
+    contact: 'Contacto',
+    // footer:
     madeWith: 'Hecho con',
     by: 'por',
     in: 'en',
