@@ -217,6 +217,7 @@ items.forEach((item) => {
 })
 
 // i18n
+
 const translations = {
   en: {
     // about:
@@ -236,9 +237,11 @@ const translations = {
     // contact:
     contact: 'Contact',
     // footer:
-    madeWith: 'Made with',
-    by: 'by',
-    in: 'in',
+    footer: {
+      madeWith: 'Made with',
+      by: 'by',
+      in: 'in',
+    },
   },
   es: {
     // about:
@@ -257,9 +260,11 @@ const translations = {
     // contact:
     contact: 'Contacto',
     // footer:
-    madeWith: 'Hecho con',
-    by: 'por',
-    in: 'en',
+    footer: {
+      madeWith: 'Hecho con',
+      by: 'por',
+      in: 'en',
+    },
   },
 }
 
@@ -281,13 +286,28 @@ function updateLanguagePopup(lang) {
   }
 }
 
+function getTranslations(translations, path) {
+  return path.split('.').reduce((value, key) => {
+    return value?.[key]
+  }, translations)
+}
+
 /** Update the content of the page according to the preferred language. */
 function applyLanguage() {
-  const lang = localStorage.getItem('language') || 'en'
-  updateLanguagePopup(lang)
+  const language = localStorage.getItem('language') || 'en'
+  updateLanguagePopup(language)
+
+  const languageTranslations = translations[language]
+
+  document.documentElement.lang = language
 
   document.querySelectorAll('[data-i18n]').forEach((elem) => {
-    elem.innerHTML = translations[lang][elem.getAttribute('data-i18n')]
+    const key = elem.dataset.i18n
+    const content = getTranslations(languageTranslations, key)
+
+    if (content !== undefined) {
+      elem.innerHTML = content
+    }
   })
 }
 
