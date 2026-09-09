@@ -1,209 +1,253 @@
 <!doctype html>
-<html lang='en'>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset='UTF-8' />
-  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dark_mode,favorite,light_mode,terminal_2,translate"
+    />
 
-  <link rel='preconnect' href='https://fonts.googleapis.com'>
-  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
-  <link href='https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap'
-    rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap'
-    rel='stylesheet'>
-  <link rel='stylesheet'
-    href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dark_mode,favorite,light_mode,terminal_2,translate' />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
 
-  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <title>Mariano's</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-  <title>Mariano's</title>
-  <link rel='stylesheet' href='styles.css' />
-</head>
+  <body>
+    <div id="root">
+      <nav>
+        <div id="nav-left">
+          <span class="material-symbols-outlined">terminal_2</span>
+        </div>
+        <div id="nav-right">
+          <div id="lang-switch" class="switch hidden">
+            <span id="lang-switch-icon" class="material-symbols-outlined"
+              >translate</span
+            >
+            <div id="lang-popup">
+              <div id="lang-en" class="lang-option">
+                <div id="lang-indicator-en" class="lang-indicator"></div>
+                <div class="lang-name">English</div>
+                <div class="lang-flag">🇬🇧</div>
+              </div>
 
-<body>
-  <div id='root'>
-    <nav>
-      <div id='nav-left'>
-        <span class='material-symbols-outlined'>terminal_2</span>
-      </div>
-      <div id='nav-right'>
-        <div id='lang-switch' class='switch hidden'>
-          <span id='lang-switch-icon' class='material-symbols-outlined'>translate</span>
-          <div id='lang-popup'>
-            <div id='lang-en' class='lang-option'>
-              <div id='lang-indicator-en' class='lang-indicator'></div>
-              <div class='lang-name'>English</div>
-              <div class='lang-flag'>🇬🇧</div>
+              <div id="lang-es" class="lang-option">
+                <div id="lang-indicator-es" class="lang-indicator"></div>
+                <div class="lang-name">Español</div>
+                <div class="lang-flag">🇪🇸</div>
+              </div>
             </div>
+          </div>
+          <div id="theme-switch" class="switch">
+            <span id="theme-icon" class="material-symbols-outlined"
+              >light_mode</span
+            >
+          </div>
+        </div>
+      </nav>
 
-            <div id='lang-es' class='lang-option'>
-              <div id='lang-indicator-es' class='lang-indicator'></div>
-              <div class='lang-name'>Español</div>
-              <div class='lang-flag'>🇪🇸</div>
+      <header>
+        <h1>Mariano Macri</h1>
+        <h2><span id="typewriter"></span><span id="cursor">_</span></h2>
+      </header>
+
+      <div class="ticker">
+        <div class="track" id="track"></div>
+        <div class="track reverse" id="track2"></div>
+      </div>
+
+      <!-- NOTE: Should I create this programatically? -->
+      <div class="accordion">
+        <div class="item">
+          <div class="header">
+            <span class="plus">+</span>
+            <span data-i18n="aboutMe">About me</span>
+          </div>
+
+          <div class="content">
+            <div class="body">
+              <p data-i18n="fullStack">
+                <span class="lead">Full-stack developer</span> delivering
+                robust, maintainable software for world-class applications —
+                web, desktop and terminal (TUI) — using bleeding-edge
+                technologies and industry best practices.
+              </p>
+              <p data-i18n="lifeLongLearner">
+                <span class="lead">Lifelong learner</span>, passionate about
+                technology and open-source, eager for the next challenge.
+              </p>
             </div>
           </div>
         </div>
-        <div id='theme-switch' class='switch'>
-          <span id='theme-icon' class='material-symbols-outlined'>light_mode</span>
+
+        <div class="item">
+          <div class="header">
+            <span class="plus">+</span> <span data-i18n="xp">Experience</span>
+          </div>
+
+          <div class="content">
+            <div class="body">
+              <p>
+                <span class="lead">Freelance</span> full-stack web developer
+                <i>(Nov 2025 - present).</i>
+              </p>
+              <p>
+                <span class="lead">Software engineer II</span>
+                <em>(Go/golang)</em> - Mid-level analyst at Mercado Libre
+                <i>(Sep 2022 - Oct 2025).</i>
+              </p>
+              <p>
+                <span class="lead">Full-stack</span> web developer
+                <em>(TS, React, Node)</em> at Henry Technologies
+                <i>(Nov 2021 - Aug 2022).</i>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="header">
+            <span class="plus">+</span> <span data-i18n="ed">Education</span>
+          </div>
+
+          <div class="content">
+            <div class="body">
+              <p>
+                <span class="lead">Ultimate Go:</span> Advanced Concepts
+                <i>(O’Reilly, 2025)</i>
+              </p>
+              <p>
+                <span class="lead">Harvard CS50</span>
+                <i>Introduction to Computer Science (Remote | 2023)</i>.
+              </p>
+              <p>
+                <span class="lead">Full-Stack</span> Web developer at Soy Henry,
+                Argentina <i>(2021)</i>. Intensive Coding Bootcamp with more
+                than 800 hours of practice, both front end and back end
+                technologies.
+              </p>
+              <p>
+                <span class="lead">Self-Taught</span> Programmer. Studied
+                programming principles and gained expertise in Go, C, C++,
+                Python, Rust and Lua through books, official tutorials, and
+                online resources. Continuously expanding my knowledge by working
+                on personal projects and exploring advanced topics in
+                programming.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="header">
+            <span class="plus">+</span>
+            <span data-i18n="showcase">Showcase</span>
+          </div>
+
+          <div class="content">
+            <div class="body">
+              <p class="showcase">
+                <span class="lead">Nanotrome</span>: a free, libre digital
+                metronome for every musician.
+                <br />
+                <img
+                  class="nano-shot"
+                  src="./assets/nanotrome.png"
+                  alt="nanotrome screenshot"
+                />
+                <br />
+
+                <em
+                  >Check it out
+                  <a
+                    href="https://mec-nyan.github.io/nanotrome/"
+                    target="_blank"
+                    >here!</a
+                  ></em
+                >
+              </p>
+
+              <div class="showcase-separator"></div>
+
+              <p class="showcase">
+                <span class="lead">Nano-tuner</span>: a free, libre digital
+                tuner to tune all the things you may want to tune.
+                <br />
+                <img
+                  class="nano-shot"
+                  src="./assets/nano-tuner.png"
+                  alt="nano-tuner screenshot"
+                />
+                <br />
+
+                <em
+                  >Check it out
+                  <a
+                    href="https://mec-nyan.github.io/nano-tuner/"
+                    target="_blank"
+                    >here!</a
+                  ></em
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="header">
+            <span class="plus">+</span> <span data-i18n="contact">Contact</span>
+          </div>
+
+          <div class="content">
+            <div class="body">
+              <p>
+                <span class="devicon-linkedin-plain contact">
+                  <a
+                    href="https://www.linkedin.com/in/mariano-m-dev"
+                    target="_blank"
+                    >mariano-m-dev</a
+                  ></span
+                >
+              </p>
+              <p>
+                <span class="devicon-github-original contact">
+                  <a href="https://github.com/mec-nyan" target="_blank"
+                    >nano (mec-nyan)</a
+                  ></span
+                >
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
 
-    <header>
-      <h1>Mariano Macri</h1>
-      <h2><span id='typewriter'></span><span id='cursor'>_</span></h2>
-    </header>
-
-    <div class='ticker'>
-      <div class='track' id='track'></div>
-      <div class='track reverse' id='track2'></div>
+      <footer>
+        <p>
+          <span data-i18n="madeWith">Made with</span>
+          <span class="material-symbols-outlined love">favorite</span>
+          <span data-i18n="by">by</span>
+          <span class="author">Nano</span>
+          <span data-i18n="in">in</span> <span class="helix">Helix</span>.
+        </p>
+      </footer>
     </div>
 
-    <!-- NOTE: Should I create this programatically? -->
-    <div class='accordion'>
-      <div class='item'>
-        <div class='header'>
-          <span class='plus'>+</span> <span data-i18n='aboutMe'>About me</span>
-        </div>
-
-        <div class='content'>
-          <div class='body'>
-            <p data-i18n='fullStack'>
-              <span class='lead'>Full-stack developer</span> delivering robust, maintainable software
-              for world-class applications — web, desktop and terminal (TUI)
-              — using bleeding-edge technologies and industry best
-              practices.
-            </p>
-            <p data-i18n='lifeLongLearner'>
-              <span class='lead'>Lifelong learner</span>, passionate about technology and open-source,
-              eager for the next challenge.
-            </p>
-
-          </div>
-        </div>
-      </div>
-
-      <div class='item'>
-        <div class='header'>
-          <span class='plus'>+</span> <span data-i18n='xp'>Experience</span>
-        </div>
-
-        <div class='content'>
-          <div class='body'>
-            <p>
-              <span class='lead'>Freelance</span> full-stack web developer <i>(Nov 2025 - present).</i>
-            </p>
-            <p>
-              <span class='lead'>Software engineer II</span> <em>(Go/golang)</em> - Mid-level analyst at Mercado Libre
-              <i>(Sep 2022 - Oct
-                2025).</i>
-            </p>
-            <p>
-              <span class='lead'>Full-stack</span> web developer <em>(TS, React, Node)</em> at Henry Technologies
-              <i>(Nov 2021 -
-                Aug
-                2022).</i>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class='item'>
-        <div class='header'>
-          <span class='plus'>+</span> <span data-i18n='ed'>Education</span>
-        </div>
-
-        <div class='content'>
-          <div class='body'>
-            <p>
-              <span class='lead'>Ultimate Go:</span> Advanced Concepts <i>(O’Reilly, 2025)</i>
-            </p>
-            <p>
-              <span class='lead'>Harvard CS50</span> <i>Introduction to Computer Science (Remote | 2023)</i>.
-            </p>
-            <p>
-              <span class='lead'>Full-Stack</span> Web developer at Soy Henry, Argentina <i>(2021)</i>. Intensive
-              Coding Bootcamp with more than 800 hours of practice, both front end and back end technologies.
-            </p>
-            <p>
-              <span class='lead'>Self-Taught</span> Programmer.
-              Studied programming principles and gained expertise
-              in Go, C, C++, Python, Rust and Lua through books,
-              official tutorials, and online resources.
-              Continuously expanding my knowledge by working on
-              personal projects and exploring advanced topics in
-              programming.
-            </p>
-
-
-          </div>
-        </div>
-      </div>
-
-      <div class='item'>
-        <div class='header'>
-          <span class='plus'>+</span> <span data-i18n='showcase'>Showcase</span>
-        </div>
-
-        <div class='content'>
-          <div class='body'>
-            <p class='showcase'>
-              <span class='lead'>Nanotrome</span>: a free, libre digital metronome for every musician.
-              <br />
-              <img class='nano-shot' src='./assets/nanotrome.png' alt='nanotrome screenshot' />
-              <br />
-
-              <em>Check it out <a href='https://mec-nyan.github.io/nanotrome/' target='_blank'>here!</a></em>
-            </p>
-
-            <div class='showcase-separator'></div>
-
-            <p class='showcase'>
-              <span class='lead'>Nano-tuner</span>: a free, libre digital tuner to tune all the things you may want to
-              tune.
-              <br />
-              <img class='nano-shot' src='./assets/nano-tuner.png' alt='nano-tuner screenshot' />
-              <br />
-
-              <em>Check it out <a href='https://mec-nyan.github.io/nano-tuner/' target='_blank'>here!</a></em>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class='item'>
-        <div class='header'>
-          <span class='plus'>+</span> <span data-i18n='contact'>Contact</span>
-        </div>
-
-        <div class='content'>
-          <div class='body'>
-            <p>
-              <span class='devicon-linkedin-plain contact'> <a href='https://www.linkedin.com/in/mariano-m-dev'
-                  target='_blank'>mariano-m-dev</a></span>
-            </p>
-            <p>
-              <span class='devicon-github-original contact'> <a href='https://github.com/mec-nyan' target='_blank'>nano
-                  (mec-nyan)</a></span>
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <footer>
-      <p>
-        <span data-i18n='madeWith'>Made with</span>
-        <span class='material-symbols-outlined love'>favorite</span>
-        <span data-i18n='by'>by</span>
-        <span class='author'>Nano</span>
-        <span data-i18n='in'>in</span> <span class='helix'>Helix</span>.
-      </p>
-    </footer>
-  </div>
-
-  <script type='module' src='script.js'></script>
-</body>
-
+    <script type="module" src="script.js"></script>
+  </body>
 </html>

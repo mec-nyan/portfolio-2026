@@ -2,3 +2,4 @@ node_modules/
 # Used only for hot reloading locally.
 package.json
 package-lock.json
+.prettierrc
