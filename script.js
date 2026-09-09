@@ -220,23 +220,27 @@ items.forEach((item) => {
 
 const translations = {
   en: {
-    // about:
-    aboutMe: 'About me',
-    fullStack: `<span class='lead'>Full-stack developer</span> delivering robust, maintainable software
+    about: {
+      title: 'About me',
+      fullStack: `<span class='lead'>Full-stack developer</span> delivering robust, maintainable software
               for world-class applications — web, desktop and terminal (TUI)
               — using bleeding-edge technologies and industry best
               practices.`,
-    lifeLongLearner: `<span class='lead'>Lifelong learner</span>, passionate about technology and open-source,
+      lifeLongLearner: `<span class='lead'>Lifelong learner</span>, passionate about technology and open-source,
               eager for the next challenge.`,
-    // experience:
-    xp: 'Experience',
-    // education:
-    ed: 'Education',
-    // showcase:
-    showcase: 'Showcase',
-    // contact:
-    contact: 'Contact',
-    // footer:
+    },
+    xp: {
+      title: '',
+    },
+    ed: {
+      title: '',
+    },
+    showcase: {
+      title: '',
+    },
+    contact: {
+      title: '',
+    },
     footer: {
       madeWith: 'Made with',
       by: 'by',
@@ -244,22 +248,26 @@ const translations = {
     },
   },
   es: {
-    // about:
-    aboutMe: 'Acerca de mi',
-    fullStack: `<span class='lead'>Desarrollador full-stack</span> creando software robusto y mantenible
+    about: {
+      title: 'Acerca de mi',
+      fullStack: `<span class='lead'>Desarrollador full-stack</span> creando software robusto y mantenible
               para aplicaciones de clase mundial — web, desktop y terminal (TUI)
               — con tecnología de punta y siguiendo las mejores prácticas de la industria.`,
-    lifeLongLearner: `<span class='lead'>Siempre aprendiento</span>, apasionado por la tecnología y el
+      lifeLongLearner: `<span class='lead'>Siempre aprendiento</span>, apasionado por la tecnología y el
               código abierto, ansioso por encontrar el próximo desafío.`,
-    // experience:
-    xp: 'Experiencia',
-    // education:
-    ed: 'Educacion',
-    // showcase:
-    showcase: 'Galería',
-    // contact:
-    contact: 'Contacto',
-    // footer:
+    },
+    xp: {
+      title: '',
+    },
+    ed: {
+      title: '',
+    },
+    showcase: {
+      title: '',
+    },
+    contact: {
+      title: '',
+    },
     footer: {
       madeWith: 'Hecho con',
       by: 'por',
