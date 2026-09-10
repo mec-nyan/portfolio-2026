@@ -141,9 +141,12 @@ body {
           flex-direction: column;
           border: 1px solid var(--border-primary);
           border-top: none;
+          z-index: 999;
+          overflow: hidden;
+          background-color: var(--bg-primary);
 
           .lang-option {
-            width: fit-content;
+            width: 170px;
             height: 50px;
             display: grid;
             grid-template-rows: 50px;
