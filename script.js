@@ -343,14 +343,14 @@ const translations = {
       title: 'Acerca de mi',
       content: `
         <p>
-          <span class="lead">Full-stack developer</span> delivering
-          robust, maintainable software for world-class applications —
-          web, desktop and terminal (TUI) — using bleeding-edge
-          technologies and industry best practices.
+          <span class="lead">Desarrollador full-stack</span> creando
+          software robusto y mantenible para aplicaciones de clase mundial —
+          web, escritorio y terminal (TUI) — con tecnología de punta, siguiendo las
+          mejores prácticas de la industria.
         </p>
         <p>
-          <span class="lead">Lifelong learner</span>, passionate about
-          technology and open-source, eager for the next challenge.
+          <span class="lead">Siempre aprendiendo</span>, apasionado por la
+          tecnología y el código abierto. Buscando el próximo desafío.
         </p>
       `,
     },
@@ -359,17 +359,17 @@ const translations = {
       title: 'Experiencia',
       content: `
         <p>
-          <span class="lead">Freelance</span> full-stack web developer
+          <span class="lead">Desarrollador</span> web full-stack (freelance)
           <i>(Nov 2025 - present).</i>
         </p>
         <p>
           <span class="lead">Software engineer II</span>
-          <em>(Go/golang)</em> - Mid-level analyst at Mercado Libre
+          <em>(Go/golang)</em> - Analista de software en Mercado Libre
           <i>(Sep 2022 - Oct 2025).</i>
         </p>
         <p>
-          <span class="lead">Full-stack</span> web developer
-          <em>(TS, React, Node)</em> at Henry Technologies
+          <span class="lead">Desarrollador</span> web full-stack
+          <em>(TS, React, Node)</em> en Henry Tecnologías S.A.
           <i>(Nov 2021 - Aug 2022).</i>
         </p>
       `,
@@ -386,18 +386,17 @@ const translations = {
           <i>Introduction to Computer Science (Remote | 2023)</i>.
         </p>
         <p>
-          <span class="lead">Full-Stack</span> Web developer at Soy Henry,
-          Argentina <i>(2021)</i>. Intensive Coding Bootcamp with more
-          than 800 hours of practice, both front end and back end
-          technologies.
+          <span class="lead">Full-Stack</span> Web developer en Soy Henry,
+          Argentina <i>(2021)</i>. Bootcamp de desarrollo intensivo con más de
+          800 horas de práctica, en tecnologías tanto de frontend como de backend.
         </p>
         <p>
-          <span class="lead">Self-Taught</span> Programmer. Studied
-          programming principles and gained expertise in Go, C, C++,
-          Python, Rust and Lua through books, official tutorials, and
-          online resources. Continuously expanding my knowledge by working
-          on personal projects and exploring advanced topics in
-          programming.
+          <span class="lead">Programador</span> autodidacta.
+          Estudié principios y práctica de la programación y Ciencias de la computación,
+          ganando experiencia en lenguages como Go, C, C++, Python, Rust y Lua entre otros
+          a través de literatura especializada, tutoriales oficiales y recursos en línea.
+          Sigo aprendiendo cada día trabajando en projectos personales y explorando tópicos
+          avanzados de programación.
         </p>
       `,
     },
@@ -405,8 +404,8 @@ const translations = {
       title: 'Galería',
       content: `
         <p class="showcase">
-          <span class="lead">Nanotrome</span>: a free, libre digital
-          metronome for every musician.
+          <span class="lead">Nanotrome</span>: un metrónomo digital libre para
+          todo músico.
           <br />
           <img
             class="nano-shot"
@@ -416,11 +415,11 @@ const translations = {
           <br />
 
           <em
-            >Check it out
+            >Podés probarlo
             <a
               href="https://mec-nyan.github.io/nanotrome/"
               target="_blank"
-              >here!</a
+              > acá.</a
             ></em
           >
         </p>
@@ -428,8 +427,8 @@ const translations = {
         <div class="showcase-separator"></div>
 
         <p class="showcase">
-          <span class="lead">Nano-tuner</span>: a free, libre digital
-          tuner to tune all the things you may want to tune.
+          <span class="lead">Nano-tuner</span>: un afinador digital libre para
+          afinar todo lo que quieras afinar.
           <br />
           <img
             class="nano-shot"
@@ -439,11 +438,11 @@ const translations = {
           <br />
 
           <em
-            >Check it out
+            >Podés probarlo
             <a
               href="https://mec-nyan.github.io/nano-tuner/"
               target="_blank"
-              >here!</a
+              > acá.</a
             ></em
           >
         </p>
