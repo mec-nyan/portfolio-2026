@@ -222,21 +222,112 @@ const translations = {
   en: {
     about: {
       title: 'About me',
-      fullStack: `<span class='lead'>Full-stack developer</span> delivering robust, maintainable software
-              for world-class applications — web, desktop and terminal (TUI)
-              — using bleeding-edge technologies and industry best
-              practices.`,
-      lifeLongLearner: `<span class='lead'>Lifelong learner</span>, passionate about technology and open-source,
-              eager for the next challenge.`,
+      content: `
+        <p>
+          <span class="lead">Full-stack developer</span> delivering
+          robust, maintainable software for world-class applications —
+          web, desktop and terminal (TUI) — using bleeding-edge
+          technologies and industry best practices.
+        </p>
+        <p>
+          <span class="lead">Lifelong learner</span>, passionate about
+          technology and open-source, eager for the next challenge.
+        </p>
+      `,
     },
     xp: {
       title: 'Experience',
+      content: `
+        <p>
+          <span class="lead">Freelance</span> full-stack web developer
+          <i>(Nov 2025 - present).</i>
+        </p>
+        <p>
+          <span class="lead">Software engineer II</span>
+          <em>(Go/golang)</em> - Mid-level analyst at Mercado Libre
+          <i>(Sep 2022 - Oct 2025).</i>
+        </p>
+        <p>
+          <span class="lead">Full-stack</span> web developer
+          <em>(TS, React, Node)</em> at Henry Technologies
+          <i>(Nov 2021 - Aug 2022).</i>
+        </p>
+      `,
     },
     ed: {
       title: 'Education',
+      content: `
+        <p>
+          <span class="lead">Ultimate Go:</span> Advanced Concepts
+          <i>(O’Reilly, 2025)</i>
+        </p>
+        <p>
+          <span class="lead">Harvard CS50</span>
+          <i>Introduction to Computer Science (Remote | 2023)</i>.
+        </p>
+        <p>
+          <span class="lead">Full-Stack</span> Web developer at Soy Henry,
+          Argentina <i>(2021)</i>. Intensive Coding Bootcamp with more
+          than 800 hours of practice, both front end and back end
+          technologies.
+        </p>
+        <p>
+          <span class="lead">Self-Taught</span> Programmer. Studied
+          programming principles and gained expertise in Go, C, C++,
+          Python, Rust and Lua through books, official tutorials, and
+          online resources. Continuously expanding my knowledge by working
+          on personal projects and exploring advanced topics in
+          programming.
+        </p>
+      `,
     },
     showcase: {
       title: 'Showcase',
+      content: `
+        <p class="showcase">
+          <span class="lead">Nanotrome</span>: a free, libre digital
+          metronome for every musician.
+          <br />
+          <img
+            class="nano-shot"
+            src="./assets/nanotrome.png"
+            alt="nanotrome screenshot"
+          />
+          <br />
+
+          <em
+            >Check it out
+            <a
+              href="https://mec-nyan.github.io/nanotrome/"
+              target="_blank"
+              >here!</a
+            ></em
+          >
+        </p>
+
+        <div class="showcase-separator"></div>
+
+        <p class="showcase">
+          <span class="lead">Nano-tuner</span>: a free, libre digital
+          tuner to tune all the things you may want to tune.
+          <br />
+          <img
+            class="nano-shot"
+            src="./assets/nano-tuner.png"
+            alt="nano-tuner screenshot"
+          />
+          <br />
+
+          <em
+            >Check it out
+            <a
+              href="https://mec-nyan.github.io/nano-tuner/"
+              target="_blank"
+              >here!</a
+            ></em
+          >
+        </p>
+      `,
     },
     contact: {
       title: 'Contact',
@@ -250,20 +341,113 @@ const translations = {
   es: {
     about: {
       title: 'Acerca de mi',
-      fullStack: `<span class='lead'>Desarrollador full-stack</span> creando software robusto y mantenible
-              para aplicaciones de clase mundial — web, desktop y terminal (TUI)
-              — con tecnología de punta y siguiendo las mejores prácticas de la industria.`,
-      lifeLongLearner: `<span class='lead'>Siempre aprendiento</span>, apasionado por la tecnología y el
-              código abierto, ansioso por encontrar el próximo desafío.`,
+      content: `
+        <p>
+          <span class="lead">Full-stack developer</span> delivering
+          robust, maintainable software for world-class applications —
+          web, desktop and terminal (TUI) — using bleeding-edge
+          technologies and industry best practices.
+        </p>
+        <p>
+          <span class="lead">Lifelong learner</span>, passionate about
+          technology and open-source, eager for the next challenge.
+        </p>
+      `,
     },
+
     xp: {
       title: 'Experiencia',
+      content: `
+        <p>
+          <span class="lead">Freelance</span> full-stack web developer
+          <i>(Nov 2025 - present).</i>
+        </p>
+        <p>
+          <span class="lead">Software engineer II</span>
+          <em>(Go/golang)</em> - Mid-level analyst at Mercado Libre
+          <i>(Sep 2022 - Oct 2025).</i>
+        </p>
+        <p>
+          <span class="lead">Full-stack</span> web developer
+          <em>(TS, React, Node)</em> at Henry Technologies
+          <i>(Nov 2021 - Aug 2022).</i>
+        </p>
+      `,
     },
     ed: {
       title: 'Educación',
+      content: `
+        <p>
+          <span class="lead">Ultimate Go:</span> Advanced Concepts
+          <i>(O’Reilly, 2025)</i>
+        </p>
+        <p>
+          <span class="lead">Harvard CS50</span>
+          <i>Introduction to Computer Science (Remote | 2023)</i>.
+        </p>
+        <p>
+          <span class="lead">Full-Stack</span> Web developer at Soy Henry,
+          Argentina <i>(2021)</i>. Intensive Coding Bootcamp with more
+          than 800 hours of practice, both front end and back end
+          technologies.
+        </p>
+        <p>
+          <span class="lead">Self-Taught</span> Programmer. Studied
+          programming principles and gained expertise in Go, C, C++,
+          Python, Rust and Lua through books, official tutorials, and
+          online resources. Continuously expanding my knowledge by working
+          on personal projects and exploring advanced topics in
+          programming.
+        </p>
+      `,
     },
     showcase: {
       title: 'Galería',
+      content: `
+        <p class="showcase">
+          <span class="lead">Nanotrome</span>: a free, libre digital
+          metronome for every musician.
+          <br />
+          <img
+            class="nano-shot"
+            src="./assets/nanotrome.png"
+            alt="nanotrome screenshot"
+          />
+          <br />
+
+          <em
+            >Check it out
+            <a
+              href="https://mec-nyan.github.io/nanotrome/"
+              target="_blank"
+              >here!</a
+            ></em
+          >
+        </p>
+
+        <div class="showcase-separator"></div>
+
+        <p class="showcase">
+          <span class="lead">Nano-tuner</span>: a free, libre digital
+          tuner to tune all the things you may want to tune.
+          <br />
+          <img
+            class="nano-shot"
+            src="./assets/nano-tuner.png"
+            alt="nano-tuner screenshot"
+          />
+          <br />
+
+          <em
+            >Check it out
+            <a
+              href="https://mec-nyan.github.io/nano-tuner/"
+              target="_blank"
+              >here!</a
+            ></em
+          >
+        </p>
+      `,
     },
     contact: {
       title: 'Contacto',
