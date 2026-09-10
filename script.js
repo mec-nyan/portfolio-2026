@@ -230,16 +230,16 @@ const translations = {
               eager for the next challenge.`,
     },
     xp: {
-      title: '',
+      title: 'Experience',
     },
     ed: {
-      title: '',
+      title: 'Education',
     },
     showcase: {
-      title: '',
+      title: 'Showcase',
     },
     contact: {
-      title: '',
+      title: 'Contact',
     },
     footer: {
       madeWith: 'Made with',
@@ -257,16 +257,16 @@ const translations = {
               código abierto, ansioso por encontrar el próximo desafío.`,
     },
     xp: {
-      title: '',
+      title: 'Experiencia',
     },
     ed: {
-      title: '',
+      title: 'Educación',
     },
     showcase: {
-      title: '',
+      title: 'Galería',
     },
     contact: {
-      title: '',
+      title: 'Contacto',
     },
     footer: {
       madeWith: 'Hecho con',
