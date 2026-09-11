@@ -340,6 +340,7 @@ body {
                   0 0 32px var(--bg-shadow);
               }
               a {
+                font-family: 'EB Garamond', serif;
                 color: var(--fg-accent);
                 &:visited {
                   color: var(--logo-ubu);

@@ -122,6 +122,11 @@ function scroller() {
       color: 'lua',
     },
     {
+      name: 'git',
+      iconName: 'git-plain',
+      color: 'ubu',
+    },
+    {
       name: 'debian',
       iconName: 'debian-plain',
       color: 'deb',
@@ -130,6 +135,11 @@ function scroller() {
       name: 'Ubuntu',
       iconName: 'ubuntu-plain',
       color: 'ubu',
+    },
+    {
+      name: 'docker',
+      iconName: 'docker-plain',
+      color: 'ts',
     },
   ]
 
@@ -180,7 +190,7 @@ typewriter('typewriter', [
 scroller()
 
 // Set the default page's theme to 'dark'.
-document.documentElement.setAttribute('data-theme', 'dark')
+document.documentElement.setAttribute('data-theme', 'light')
 
 // Add the theme switcher.
 const ts = document.getElementById('theme-switch')
